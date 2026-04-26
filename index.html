@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idrees Auto Electrician | Bareilly's Best Car Tech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #ffcc00;
+            --accent: #00d4ff;
+            --dark: #050505;
+            --card: #121212;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+        body { background: var(--dark); color: #fff; overflow-x: hidden; }
+
+        /* Header */
+        header {
+            background: rgba(0,0,0,0.9);
+            padding: 15px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+            border-bottom: 1px solid #222;
+        }
+        .logo { font-family: 'Orbitron', sans-serif; color: var(--primary); font-size: 1.5rem; font-weight: 700; }
+
+        /* Hero with Car Graphic */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.2)), 
+                        url('https://images.unsplash.com/photo-1632733711679-539da695AD1e?q=80&w=2000'); /* Live repair image */
+            background-size: cover;
+            background-position: center;
+            display: flex; align-items: center; padding: 0 8%;
+        }
+        .hero-content { max-width: 700px; }
+        .hero h1 { font-family: 'Orbitron', sans-serif; font-size: 4rem; line-height: 1.1; margin-bottom: 20px; color: var(--primary); }
+        .hero p { font-size: 1.2rem; color: #ccc; margin-bottom: 30px; border-left: 4px solid var(--primary); padding-left: 15px; }
+
+        /* Live Work Gallery Section */
+        .work-gallery { padding: 100px 8%; background: #080808; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 50px; }
+        .work-item { position: relative; border-radius: 10px; overflow: hidden; height: 250px; border: 1px solid #333; }
+        .work-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; opacity: 0.8; }
+        .work-item:hover img { transform: scale(1.1); opacity: 1; }
+        .work-label { position: absolute; bottom: 10px; left: 10px; background: var(--primary); color: #000; padding: 5px 15px; font-weight: 700; font-size: 0.8rem; border-radius: 4px; }
+
+        /* Services with Icons */
+        .services { padding: 100px 8%; }
+        .service-card { background: var(--card); padding: 40px; border-radius: 20px; transition: 0.3s; position: relative; overflow: hidden; }
+        .service-card:hover { background: #1a1a1a; border: 1px solid var(--primary); }
+        .service-card i { font-size: 3rem; color: var(--primary); margin-bottom: 20px; }
+
+        /* Booking Form */
+        .booking { padding: 100px 8%; background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); }
+        .form-box { background: rgba(20,20,20,0.9); padding: 50px; border-radius: 20px; max-width: 800px; margin: 0 auto; border: 1px solid #333; }
+        input, select, textarea { width: 100%; padding: 15px; margin-bottom: 20px; background: #000; border: 1px solid #444; color: #fff; border-radius: 5px; }
+        .submit-btn { background: var(--primary); color: #000; border: none; padding: 15px 40px; font-weight: 700; width: 100%; cursor: pointer; border-radius: 5px; }
+
+        /* Footer */
+        footer { padding: 60px 8% 20px; background: #000; border-top: 2px solid var(--primary); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; margin-bottom: 40px; }
+        .social a { color: #fff; font-size: 1.5rem; margin-right: 20px; transition: 0.3s; }
+        .social a:hover { color: var(--primary); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">IDREES AUTO</div>
+    <div class="social">
+        <a href="https://www.instagram.com/mohdsahil_04?igsh=NnNyZjRiMmRwN29w" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@mohdsahil04?si=HF8D3DyurZUNRYvt" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <p>MOHD IDREES | PROFESSIONAL WORKSHOP</p>
+        <h1>ADVANCED CAR<br><span style="color: var(--accent);">ELECTRICAL</span> SOLUTIONS</h1>
+        <p>Pratap Filling Station, Faridpur, Bareilly. Specializing in High-End Scanner Diagnostics & Precision Wiring.</p>
+        <a href="#book" class="submit-btn" style="text-decoration:none; display:inline-block; width:auto;">GET A SCAN CHECKUP</a>
+    </div>
+</section>
+
+<section class="work-gallery">
+    <h2 style="text-align: center; font-family: 'Orbitron';">WORK IN PROGRESS</h2>
+    <div class="grid">
+        <div class="work-item">
+            <img src="https://images.unsplash.com/photo-1597766353939-936603a55428?q=80&w=800" alt="Scanning">
+            <div class="work-label">COMPUTER SCANNING</div>
+        </div>
+        <div class="work-item">
+            <img src="https://images.unsplash.com/photo-1615906659123-23d300f68482?q=80&w=800" alt="Wiring">
+            <div class="work-label">FULL WIRING WORK</div>
+        </div>
+        <div class="work-item">
+            <img src="https://images.unsplash.com/photo-1635437536607-b8572fcd43c1?q=80&w=800" alt="Alternator">
+            <div class="work-label">ALTERNATOR & SELF REPAIR</div>
+        </div>
+    </div>
+</section>
+
+<section class="services">
+    <div class="grid">
+        <div class="service-card">
+            <i class="fas fa-microchip"></i>
+            <h3>Sensor Repair</h3>
+            <p>Precise diagnosis and replacement of ABS, Oxygen, and Engine sensors using advanced diagnostic tablets.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-bolt"></i>
+            <h3>Stator & Motors</h3>
+            <p>Specialized servicing for Starter motors (Self) and Alternators to ensure peak battery performance.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-network-wired"></i>
+            <h3>ECU Diagnostics</h3>
+            <p>In-depth scanning of vehicle electronic control units to clear fault codes and improve efficiency.</p>
+        </div>
+    </div>
+</section>
+
+<section class="booking" id="book">
+    <div class="form-box">
+        <h2 style="text-align: center; margin-bottom: 30px; font-family: 'Orbitron';">BOOK APPOINTMENT</h2>
+        <form>
+            <input type="text" placeholder="Owner Name" required>
+            <input type="text" placeholder="Car Model (e.g. Swift, Fortuner)" required>
+            <select>
+                <option>Scanning & Sensor Work</option>
+                <option>Wiring Issue</option>
+                <option>Self / Alternator Service</option>
+                <option>Lights & Horn Installation</option>
+            </select>
+            <textarea rows="4" placeholder="Describe the issue..."></textarea>
+            <button type="submit" class="submit-btn">CONFIRM SERVICE</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div>
+            <h3 style="color:var(--primary)">Idrees Auto Electrician</h3>
+            <p>Expert car electrician with all types of modern scanners and tools.</p>
+            <p style="margin-top:15px;"><i class="fas fa-phone"></i> +91 9412528786</p>
+        </div>
+        <div>
+            <h3 style="color:var(--primary)">Location</h3>
+            <p>Pratap Filling Station,<br>Faridpur, Bareilly</p>
+        </div>
+        <div>
+            <h3 style="color:var(--primary)">Follow Us</h3>
+            <div class="social" style="margin-top:10px;">
+                <a href="https://www.instagram.com/mohdsahil_04?igsh=NnNyZjRiMmRwN29w"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/@mohdsahil04?si=HF8D3DyurZUNRYvt"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div style="text-align:center; border-top:1px solid #222; padding-top:20px; font-size:0.8rem; color:#666;">
+        Tagline: <strong>Mohd Idrees</strong> | Built for Excellence
+    </div>
+</footer>
+
+</body>
+</html>
